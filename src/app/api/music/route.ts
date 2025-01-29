@@ -51,7 +51,6 @@ const getHandler = async () => {
             album: albumName,
             albumImageUrl,
             artistName,
-            isPlaying,
             songUrl,
             title,
             isPlaying,

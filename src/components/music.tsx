@@ -27,7 +27,7 @@ export default function SpotifyWidget() {
                     <div className="">
                         <p>Currently Listening to:</p>
                     </div>
-                    <Tilt glareEnable className="rounded">
+                    <Tilt glareEnable className="rounded-2xl">
                         <Link
                             target="_blank"
                             rel="noopener noreferer"
