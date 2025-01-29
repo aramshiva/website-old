@@ -51,7 +51,7 @@ export default function SpotifyWidget() {
                                 <p className="font-bold text-white dark:text-black">{data.title}</p>
                                 <p className="font-dark text-xs text-white dark:text-black -my-5">{data.artistName}</p>
                             </div>
-                            <div className="absolute bottom-2 right-2">
+                            <div className="absolute bottom-4 right-4">
                                 <SiLastdotfm size={20} className="text-white dark:text-black" />
                             </div>
                         </Link>
