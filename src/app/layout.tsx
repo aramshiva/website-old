@@ -3,6 +3,7 @@ import "./globals.css";
 import Fm from "@/components/fm";
 import Nav from "@/components/nav";
 import { SessionProvider } from "next-auth/react";
+import SpotifyWidget from "@/components/music";
 
 export const metadata: Metadata = {
   title: "Aram",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Fm>
             <Nav />
             <SessionProvider>{children}</SessionProvider>
+            <SpotifyWidget />
           </Fm>
         </body>
       </html>
