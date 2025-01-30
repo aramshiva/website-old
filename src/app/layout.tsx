@@ -4,6 +4,7 @@ import Fm from "@/components/fm";
 import Nav from "@/components/nav";
 import { SessionProvider } from "next-auth/react";
 import SpotifyWidget from "@/components/music";
+import * as motion from "motion/react-client"
 
 export const metadata: Metadata = {
   title: "Aram",
@@ -21,19 +22,24 @@ export default function RootLayout({
         <body
           className="
           antialiased bg-[#1f2422] dark:bg-white p-20 
-          w-screen prose prose-p:text-white dark:prose-p:text-black 
-          prose-blockquote:font-eiko prose-a:text-sm prose-a:no-underline
-        prose-a:text-[#e6e9ff] dark:prose-a:text-[#1f2422] 
-        prose-h1:text-white dark:prose-h1:text-black
-        prose-h2:text-white dark:prose-h2:text-black
-        prose-h3:text-white dark:prose-h3:text-black
+          w-screen prose text-white dark:text-black 
+          prose-p:text-white dark:prose-p:text-black 
+          prose-blockquote prose-a:text-sm prose-a:no-underline
+          prose-a:text-[#e6e9ff] dark:prose-a:text-[#1f2422]
            "
         >
-          <Fm>
-            <Nav />
-            <SessionProvider>{children}</SessionProvider>
+            <SessionProvider>
+              {" "}
+              <motion.div
+          initial={{ filter: "blur(5px)" }}
+          animate={{ filter: "blur(0px)" }}
+          transition={{ duration: 0.25 }}
+              >
+          <Nav />
+          {children}
+              </motion.div>
+            </SessionProvider>
             <SpotifyWidget />
-          </Fm>
         </body>
       </html>
     </>
