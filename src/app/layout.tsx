@@ -32,7 +32,7 @@ export default function RootLayout({
               <motion.div
           initial={{ filter: "blur(5px)" }}
           animate={{ filter: "blur(0px)" }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.75 }}
               >
           <Nav />
           {children}
