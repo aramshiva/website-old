@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Fm from "@/components/fm";
 import Nav from "@/components/nav";
 import { SessionProvider } from "next-auth/react";
 import SpotifyWidget from "@/components/music";
