@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/nav";
 import { SessionProvider } from "next-auth/react";
-import SpotifyWidget from "@/components/music";
+import { Music } from "@/components/music";
 import * as motion from "motion/react-client"
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function RootLayout({
           {children}
               </motion.div>
             </SessionProvider>
-            <SpotifyWidget />
+            <Music />
         </body>
       </html>
     </>
