@@ -40,20 +40,26 @@ const getNowPlaying = async (): Promise<NowPlayingResponse> => {
 const getHandler = async () => {
     try {
         const data = await getNowPlaying();
-        const track = data.recenttracks.track[0];
-        const isPlaying = track['@attr'] && track['@attr'].nowplaying === 'true';
-        const { name: title, artist, album, url: songUrl, image } = track;
+        const nowPlayingTrack = data.recenttracks.track.find(track => track['@attr'] && track['@attr'].nowplaying === 'true');
+
+        if (!nowPlayingTrack) {
+            return NextResponse.json({ error: "No track is currently playing" }, { status: 404 });
+        }
+
+        const { name: title, artist, album, url: songUrl, image } = nowPlayingTrack;
         const artistName = artist['#text'];
         const albumName = album['#text'];
         const albumImageUrl = image[image.length - 1]['#text'];
 
         return NextResponse.json({
-            album: albumName,
-            albumImageUrl,
-            artistName,
-            songUrl,
+            ...data["recenttracks"]["track"][0],
             title,
-            isPlaying,
+            artistName,
+            albumName,
+            albumImageUrl,
+            songUrl,
+            isPlaying: true,
+            duration,
         });
     } catch (error) {
         console.error("Error:", error);

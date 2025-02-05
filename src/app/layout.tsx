@@ -20,7 +20,7 @@ export default function RootLayout({
       <html lang="en" className="dark">
         <body
           className="
-          antialiased bg-[#1f2422] dark:bg-white p-20 
+          antialiased bg-neutral-800 dark:bg-white p-20 
           w-screen prose text-white dark:text-black 
           prose-p:text-white dark:prose-p:text-black 
           prose-blockquote prose-a:text-sm prose-a:no-underline
@@ -32,7 +32,7 @@ export default function RootLayout({
               <motion.div
           initial={{ filter: "blur(5px)" }}
           animate={{ filter: "blur(0px)" }}
-          transition={{ duration: 0.75 }}
+          transition={{ duration: 0.35 }}
               >
           <Nav />
           {children}

@@ -23,7 +23,7 @@ export function Music() {
       className="fixed bottom-3 right-0 flex flex-col pb-3 px-3 align-middle text-white dark:text-black"
     >
       <div className="fixed bottom-3 right-0 flex flex-col pb-3 px-3 align-middle text-white dark:text-black">
-        <div className="rounded-xl border border-[#333b37] dark:border-gray-300 pb-3 px-3 shadow-xl bg-[#1f2422] dark:bg-white">
+        <div className="rounded-xl border border-[#333b37] dark:border-gray-300 pb-3 px-3 shadow-xl bg-neutral-800 dark:bg-white">
           <div className="">
             <p>Currently Listening to:</p>
           </div>
@@ -76,7 +76,7 @@ export function LastPlayed() {
         className="w-[26rem] flex flex-col px-3 align-middle text-white dark:text-black"
       >
         <div className="flex flex-col px-3 text-white dark:text-black">
-          <div className="rounded-xl border border-[#333b37] dark:border-gray-300 px-3 pb-3 shadow-xl bg-[#1f2422] dark:bg-white">
+          <div className="rounded-xl border border-[#333b37] dark:border-gray-300 px-3 pb-3 shadow-xl bg-neutral-800 dark:bg-white">
             <div className="pl-1">
               <p>
                 Last Played on <SiLastdotfm className="inline" />
