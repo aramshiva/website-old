@@ -10,7 +10,7 @@ export async function GET() {
     try {
         const data = await myReadShelf.fetch();
         return NextResponse.json(data);
-    } catch (e) {
+    } catch {
         return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
     }
 }
