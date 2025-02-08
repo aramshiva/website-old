@@ -31,7 +31,7 @@ export function Music() {
             <Link
               target="_blank"
               rel="noopener noreferer"
-              href={data.songUrl || "https://www.last.fm/user/aramshi"}
+              href={data.songUrl || "https://www.last.fm/user/armhs"}
               className="relative flex w-72 items-center space-x-4 rounded-2xl px-5 transition-shadow hover:shadow-2xl"
             >
               <div className="w-16">
@@ -86,7 +86,7 @@ export function LastPlayed() {
               <Link
                 target="_blank"
                 rel="noopener noreferer"
-                href={data?.songUrl || "https://www.last.fm/user/aramshi"}
+                href={data?.songUrl || "https://www.last.fm/user/armhs"}
                 className="relative flex w-[20rem] items-center space-x-4 rounded-2xl px-5 transition-shadow hover:shadow-2xl"
               >
                 <div className="w-16">
